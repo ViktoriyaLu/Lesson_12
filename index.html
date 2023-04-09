@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="header">Сервис комментариев со спам фильтром</h1>
+    <div class="container">
+        <div class="left">
+            <h2 class="header2">Оставьте Ваш комментарий</h2>
+
+            <form action="form">
+                <h3 class="header">Введите Ваше ФИО: </h3>
+                <input type="text" class="display-name" id="display-name" name="display-name" maxlength="50"
+                    placeholder="ФИО" />
+
+                <h3 class="header">Введите ссылку Вашего аватара:</h3>
+                <input type="text" class="display-avatar"   src="" alt="Аватар">
+
+                <h3 class="text">Оставьте комментарий:</h3>
+                <textarea name="textarea" class="display-comment" id="" cols="30" rows="10"></textarea>
+
+                <!-- <input type="button" class= "button" onclick="alert('Hello World!')" value="Click Me!"> -->
+            </form>
+
+            <button class="button">Отправить</button>
+        </div>
+        <div class="right">
+            <h2 class="header2">Чат</h2>
+
+            <div class="userDate">
+                <img class="userDate__avatar" id="avatar" src="" alt="">
+                <p type="text" class="userDate__Name"></p>
+            </div>
+            <p class="userDate__comment" id="comment"></p>
+
+
+
+        </div>
+    </div>
+
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
