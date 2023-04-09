@@ -1,26 +1,32 @@
-const displayName = document.querySelector('.display-name');
-const displayAvatar = document.querySelector('.display-avatar');
-const displayComment = document.querySelector('.display-comment');
-const userDateName = document.querySelector('.userDate__Name');
-const userDateAvatar = document.querySelector('.userDate__avatar');
-const userDateComment = document.querySelector('.userDate__comment');
-const send = document.querySelector('.button'); //кнопка
-// console.log(displayName);
-// console.log(displayAvatar);
-// console.log(displayComment);
-// console.log(userDateAvatar);
-// console.log(userDateComment);
-// console.log(send);
 
-const userName = displayName.textContent;
-const avatar = displayAvatar.textContent;
-const comment = displayComment.textContent;
-// console.log(userName);
-// console.log(avatar);
-// console.log(comment);
-send.addEventListener('click', () =>{
-    document.querySelector('.userDate__Name').innerHTML = userName;
+const button = document.querySelector('.button'); //кнопка
+
+button.addEventListener('click', () =>{
+    document.querySelector('.userDate__Name').innerText = document.getElementById('display-name').value;
+    document.querySelector('.userDate__avatar').innerText = document.getElementById('link_input').value;
+    document.querySelector('.userDate__comment').innerText = document.getElementById('msg_input').value;
     userDateComment=comment;
 });
 
-console.log (userDateName);
+// console.log (userDateComment);
+ 
+// Все слова с заглавной буквы
+// function ( ) {
+//     capitalize(userName)
+// }
+
+// Это задание куда пристроить?
+
+const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
+const comment2 = checkSpam('free xxx'); //результат free ***
+const comment3 = checkSpam("innocent rabbit") ; //результат innocent rabbit
+ 
+const str1 = 'buy ViAgRA now';
+const n = str1.replace( /ViAgRA/g, '***');
+console.log(n);
+const str2 = 'buy ViAgRA now';
+const m = str2.replace( /xxx/g, '***');
+console.log(m);
+const str3 = 'buy ViAgRA now';
+const p = str1.replace( /ViAgRA/g, '***');
+console.log(p);
