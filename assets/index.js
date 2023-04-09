@@ -19,7 +19,8 @@ const comment = displayComment.textContent;
 // console.log(avatar);
 // console.log(comment);
 send.addEventListener('click', () =>{
-userDateName.textContent = userName
+    document.querySelector('.userDate__Name').innerHTML = userName;
+    userDateComment=comment;
 });
 
-console.log (userDateName.textContent);
+console.log (userDateName);
