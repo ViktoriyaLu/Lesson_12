@@ -33,30 +33,27 @@ avatarImg.src = avatar;
 //Устанавливаем содержимое элемента "commentParagraph" в виде значения переменной comment, прошедшего проверку на спам
 commentParagraph.innerText = checkSpam(comment);
 
+// При нажатии на кнопку очищаются поля для ввода
+document.getElementById("display-name").value = "";
+document.getElementById('msg_input').value = "";
+document.querySelector('.display-avatar').value = "";
+
 });
 
-// Функции для проверки комментария на наличие слова ViAgRA и замены его на **
+// Функции для проверки комментария на наличие слова ViAgRA и замены его на ***
 function checkSpam(comment){
     const censoredComment = comment.replace(/ViAgRA/gi, "***");
     return censoredComment;
 }
+// Функция для проверки комментария на наличие ххх и замены его на  ***
+function checkSpam(comment){
+    const censoredComment = comment.replace(/xxx/gi, "***");
+    return censoredComment;
+}
+
+ 
 
 
 
 
-// const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
-// const comment2 = checkSpam('free xxx'); //результат free ***
-// const comment3 = checkSpam("innocent rabbit") ; //результат innocent rabbit
-
-
-
-
-// const str1 = 'buy ViAgRA now';
-// const n = str1.replace( /ViAgRA/g, '***');
-// console.log(n);
-// const str2 = 'buy ViAgRA now';
-// const m = str2.replace( /xxx/g, '***');
-// console.log(m);
-// const str3 = 'buy ViAgRA now';
-// const p = str1.replace( /ViAgRA/g, '***');
-// console.log(p);
+ 
