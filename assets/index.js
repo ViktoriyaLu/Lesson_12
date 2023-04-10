@@ -31,11 +31,11 @@ nameParagraph.innerText = name;
 avatarImg.src = avatar;
 
 //Устанавливаем содержимое элемента "commentParagraph" в виде значения переменной comment, прошедшего проверку на спам
-commentParagraph.innertext = checkSpam(comment);
+commentParagraph.innerText = checkSpam(comment);
 
 });
 
-// Функции ждя проверки комментария на наличие слова ViAgRA и замены его на **
+// Функции для проверки комментария на наличие слова ViAgRA и замены его на **
 function checkSpam(comment){
     const censoredComment = comment.replace(/ViAgRA/gi, "***");
     return censoredComment;
