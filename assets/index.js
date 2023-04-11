@@ -22,7 +22,7 @@ const nameParagraph = document.querySelector('.userDate__Name');
 const commentParagraph = document.querySelector('.userDate__comment')
 
 //Устанавливаем содержимое элемента "avatarImg" в виде изображения с URL, указанным в переменной avatar
-avatarImg.innerHTML = '<img srl = "${avatar}">';
+avatarImg.innerHTML = `<img srl = "${avatar}">`;
 
 //Устанавливаем содержимое элемента "nameParagraph" в виде значения переменной name
 nameParagraph.innerText = name;
